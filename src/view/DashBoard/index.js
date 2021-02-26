@@ -30,19 +30,19 @@ const useStyles = makeStyles((theme) => ({
 const DashBoard = () => {
     const classes = useStyles();
     return (
-        <div className={classes.root}>
-            <NavBar />
-            <main className={classes.content}>
-                <div className={classes.appBarSpacer} />
-                <Router>
+        <Router>
+            <div className={classes.root}>
+                <NavBar />
+                <main className={classes.content}>
+                    <div className={classes.appBarSpacer} />
                     <Switch>
                         <Route exact path="/" component={Customers} />
                         <Route exact path="/report" component={CReport} />
                         <Route exact path="/order" component={Order} />
                     </Switch>
-                </Router>
-            </main>
-        </div>
+                </main>
+            </div>
+        </Router>
     )
 }
 

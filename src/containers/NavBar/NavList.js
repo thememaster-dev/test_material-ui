@@ -8,28 +8,29 @@ import PeopleIcon from '@material-ui/icons/People';
 import BarChartIcon from '@material-ui/icons/BarChart';
 import LayersIcon from '@material-ui/icons/Layers';
 
-// import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink } from 'react-router-dom';
+
+const to = "/";
+const report = "/report";
+const order = "/order";
 
 export const mainListItems = (
   <div>
-    {/* <RouterLink to="peaple">
-
-    </RouterLink> */}
-    <ListItem button>
+    <ListItem button component={RouterLink} to={to}>
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
       <ListItemText primary="Dashboard" />
     </ListItem>
 
-    <ListItem button>
+    <ListItem button component={RouterLink} to={report}>
       <ListItemIcon>
         <ShoppingCartIcon />
       </ListItemIcon>
       <ListItemText primary="Orders" />
     </ListItem>
 
-    <ListItem button>
+    <ListItem button component={RouterLink} to={order}>
       <ListItemIcon>
         <PeopleIcon />
       </ListItemIcon>
