@@ -1,6 +1,6 @@
 
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
-import { orange } from '@material-ui/core/colors';
+
 
 
 
@@ -9,12 +9,9 @@ import DashBoard from './view/DashBoard';
 
 const theme = createMuiTheme({
   palette: {
-    primary: {
-      main: orange[500],
-    },
-    secondary: {
-      main: '#fff',
-    },
+    // secondary: {
+    //   main: '#fff',
+    // },
   },
 });
 
