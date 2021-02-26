@@ -2,6 +2,15 @@ import React from 'react'
 import NavBar from '../../containers/NavBar'
 import { makeStyles } from '@material-ui/core/styles';
 
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+} from "react-router-dom";
+
+import Customers from '../Customers'
+import CReport from '../CReport'
+import Order from '../Order'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -25,7 +34,13 @@ const DashBoard = () => {
             <NavBar />
             <main className={classes.content}>
                 <div className={classes.appBarSpacer} />
-                <div>hi</div>
+                <Router>
+                    <Switch>
+                        <Route exact path="/" component={Customers} />
+                        <Route exact path="/report" component={CReport} />
+                        <Route exact path="/order" component={Order} />
+                    </Switch>
+                </Router>
             </main>
         </div>
     )
