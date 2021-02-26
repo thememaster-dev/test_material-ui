@@ -15,14 +15,8 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-} from "react-router-dom";
 
 import { mainListItems } from './NavList';
-import Peaple from '../../view/Peaple';
 
 const drawerWidth = 300;
 
@@ -79,7 +73,6 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         justifyContent: 'flex-end',
         padding: theme.spacing(0, 1),
-        // necessary for content to be below app bar
         ...theme.mixins.toolbar,
     },
     appBarSpacer: theme.mixins.toolbar,
@@ -98,7 +91,7 @@ const NavBar = () => {
 
     const classes = useStyles();
     const theme = useTheme();
-    const [open, setOpen] = React.useState(true);
+    const [open, setOpen] = React.useState(false);
 
     const handleDrawerOpen = () => {
         setOpen(true);
@@ -156,15 +149,6 @@ const NavBar = () => {
                 </List>
                 <Divider />
             </Drawer>
-            <main className={classes.content}>
-                <div className={classes.appBarSpacer} />
-                <Router>
-                    <Switch>
-                        <Route path="/people" component={Peaple} />
-                    </Switch>
-                </Router>
-
-            </main>
         </div>
     )
 }
