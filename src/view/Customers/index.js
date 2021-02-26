@@ -6,13 +6,10 @@ import {
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
-function rand() {
-    return Math.round(Math.random() * 20) - 10;
-  }
 
   function getModalStyle() {
-    const top = 50 + rand();
-    const left = 50 + rand();
+    const top = 50;
+    const left = 50;
 
     return {
       top: `${top}%`,
@@ -59,11 +56,14 @@ const Customers = () => {
                 aria-describedby="simple-modal-description"
             >
 
-                <div style={modalStyle} className={classes.paper}>
-                    <h2>Text in a modal</h2>
+                <div style={modalStyle} align="center" className={classes.paper}>
+                    <h4>are you sure??</h4>
                     <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
-                    <Button variant="outlined" color="primary" onClick={handleClose}>
-                        close Modal
+                    <Button color="primary" onClick={handleClose}>
+                        close
+                    </Button>
+                    <Button  color="secondary" onClick={handleClose}>
+                        Dellete
                     </Button>
                 </div>
             </Modal>

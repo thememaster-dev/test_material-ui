@@ -13,8 +13,8 @@ import { Link as RouterLink } from 'react-router-dom';
 
 export const mainListItems = (
   <div>
-    <ListItem button component={RouterLink} to={"/"}>
-      <ListItemIcon>
+    <ListItem button component={RouterLink} to={"/"} >
+      <ListItemIcon >
         <DashboardIcon />
       </ListItemIcon>
       <ListItemText primary="Dashboard" />
