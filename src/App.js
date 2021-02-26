@@ -2,11 +2,7 @@
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import { orange } from '@material-ui/core/colors';
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
+
 
 import './App.css';
 import DashBoard from './view/DashBoard';
