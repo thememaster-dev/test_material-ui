@@ -10,27 +10,24 @@ import LayersIcon from '@material-ui/icons/Layers';
 
 import { Link as RouterLink } from 'react-router-dom';
 
-const to = "/";
-const report = "/report";
-const order = "/order";
 
 export const mainListItems = (
   <div>
-    <ListItem button component={RouterLink} to={to}>
+    <ListItem button component={RouterLink} to={"/"}>
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
       <ListItemText primary="Dashboard" />
     </ListItem>
 
-    <ListItem button component={RouterLink} to={report}>
+    <ListItem button component={RouterLink} to={"/report"}>
       <ListItemIcon>
         <ShoppingCartIcon />
       </ListItemIcon>
       <ListItemText primary="Orders" />
     </ListItem>
 
-    <ListItem button component={RouterLink} to={order}>
+    <ListItem button component={RouterLink} to={"/order"}>
       <ListItemIcon>
         <PeopleIcon />
       </ListItemIcon>
